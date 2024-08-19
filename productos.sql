@@ -28,3 +28,8 @@ CHANGE COLUMN `id_producto` `id_producto` INT NOT NULL ,
 CHANGE COLUMN `id_proveedor` `id_proveedor` INT NOT NULL ,
 ADD PRIMARY KEY (`id_producto`, `id_proveedor`);
 ;
+
+/* PONER FOREIGN KEY */
+ALTER TABLE shop.productos
+ADD CONSTRAINT fk_productos_categoria
+FOREIGN KEY (id_cat) REFERENCES categorias(id_cat);

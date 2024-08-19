@@ -19,3 +19,8 @@ ALTER TABLE `shop`.`facturacion`
 CHANGE COLUMN `id_factura` `id_factura` INT NOT NULL ,
 ADD PRIMARY KEY (`id_factura`);
 ;
+
+/* PONER FOREIGN KEY */
+ALTER TABLE shop.facturacion
+ADD CONSTRAINT fk_facturacion_cliente
+FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente);

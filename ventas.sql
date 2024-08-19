@@ -28,3 +28,16 @@ ALTER TABLE `shop`.`ventas`
 CHANGE COLUMN `id_venta` `id_venta` INT NOT NULL ,
 ADD PRIMARY KEY (`id_venta`);
 ;
+
+/* PONER FOREIGN KEY */
+ALTER TABLE shop.ventas
+ADD CONSTRAINT fk_ventas_cliente
+FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente);
+
+ALTER TABLE shop.ventas
+ADD CONSTRAINT fk_ventas_producto
+FOREIGN KEY (id_producto) REFERENCES productos(id_producto);
+
+ALTER TABLE shop.ventas
+ADD CONSTRAINT fk_ventas_factura
+FOREIGN KEY (id_factura) REFERENCES facturacion(id_factura);
