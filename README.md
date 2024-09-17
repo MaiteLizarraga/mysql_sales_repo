@@ -1,4 +1,4 @@
-# Data Modelling in MySQL
+# Data Modelling and Normalization in MySQL
 
 Before creating our database, we need to take a look at our raw data create a model that will suit best our needs. We will also need to normalize it. 
 *    The goal of data modeling is to create a conceptual or logical representation of the data structures that will be used in a database system, reflecting the relationships between different data entities.
